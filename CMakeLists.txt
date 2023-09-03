@@ -1,3 +1,5 @@
-set(COMPONENT_ADD_INCLUDEDIRS include)
-set(COMPONENT_SRCS "dht11.c")
-register_component()
+idf_component_register(
+    SRCS "dht11.c"
+    INCLUDE_DIRS "include"
+    REQUIRES "esp_timer" "driver"
+)
